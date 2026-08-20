@@ -1,28 +1,26 @@
+from collections import deque
+
 graph = {
-  '5' : ['3','7'],
-  '3' : ['2', '4'],
-  '7' : ['8'],
-  '2' : [],
-  '4' : ['8'],
-  '8' : []
+    'A': ['B', 'C'],
+    'B': ['A'],
+    'C': ['A']
 }
+def bfs(start):
+    visited = set()
+    queue = deque([start])
+    while queue:
+        node = queue.popleft()
+        if node not in visited:
+            print(node, end=" ")
+            visited.add(node)
+            for neighbour in graph[node]:
+                if neighbour not in visited:
+                    queue.append(neighbour)
+print("BFS Traversal:")
+bfs('A')
 
-visited = []
-queue = []    
-
-def bfs(visited, graph, node):
-  visited.append(node)
-  queue.append(node)
-  while queue:          
-    m = queue.pop(0) 
-    print (m, end = " ") 
-    for neighbour in graph[m]:
-      if neighbour not in visited:
-        visited.append(neighbour)
-        queue.append(neighbour)
-print("Following is the Breadth-First Search")
-bfs(visited, graph, '5')    
-
-#OUTPUT:
-#Following is the Breadth-First Search
-#5 3 7 2 4 8 
+'''
+OUTPUT:
+BFS Traversal:
+A B C 
+'''
