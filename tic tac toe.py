@@ -47,3 +47,43 @@ while True:
         show(); print("computer Wins!"); break
     if " " not in b:
         show(); print("Draw!"); break
+
+'''
+output:
+ | | 
+-----
+ | | 
+-----
+ | | 
+-----
+Enter position (1-9): 5
+O| | 
+-----
+ |X| 
+-----
+ | | 
+-----
+Enter position (1-9): 3
+O| |X
+-----
+ |X| 
+-----
+O| | 
+-----
+Enter position (1-9): 4
+O| |X
+-----
+X|X|O
+-----
+O| | 
+-----
+Enter position (1-9): 2
+O|X|X
+-----
+X|X|O
+-----
+O|O| 
+-----
+Enter position (1-9): 9
+Draw!
+'''
