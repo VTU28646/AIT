@@ -45,3 +45,13 @@ if graph_coloring(vertices, assigned):
         print(vertex, "->", assigned[vertex])
 else:
     print("Coloring not possible")
+
+
+'''
+Graph Coloring:
+A -> Blue
+B -> White
+C -> White
+D -> Blue
+E -> White
+'''
